@@ -14,5 +14,3 @@
 .gitignore
 /web/dist/
 /node_modules/
-*.mov
-*.mp4
