@@ -1,11 +1,24 @@
 {% extends 'base.html.twig' %}
 {% block body_id 'home' %}
 {% block body %}
-    {#<div class="video-container">#}
-        {#<video autoplay loop poster="" id="bgvid" class='fillWidth' >#}
-            {#<source src="{{ asset('videos/toystory.mp4') }}" type="video/mp4">#}
-        {#</video>#}
-    {#</div>#}
+
+    <div class="overlay"></div>
+
+    <div id="video">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="margin-top-2rem">
+                        <img class="cross" alt="close" id="cross-close" src="{{ asset('img/cross.png') }}" />
+                        <video autoplay loop id="bgvid" class='fillWidth'>
+                            <source src="{{ asset('videos/video.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <div class="row">
@@ -24,9 +37,9 @@
                         INNOVATION BY POLYMATHS
                     </h3>
 
-                    <a href="{{ path('video') }}" class="text-center">
+                    <button id="button" class="text-center">
                         <img id="play" class="img-fluid play" alt="" title="" src="{{ asset('img/play.png') }}">
-                    </a>
+                    </button>
 
                     <p class="know">
                         KNOW MORE
@@ -44,10 +57,11 @@
                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#mContact">
                        <span  class="contact">{{ 'home.button.contact'|trans }}</span>
                    </button>
-                   <a class="btn btn-link" href="https://twitter.com/afrily54">TWEET</a>
-                   <a class="btn btn-link" href="https://www.facebook.com/afrily54/">LIKE</a>
-                   <a class="btn btn-link" href="https://www.instagram.com/afrily54/">TAG</a>
-                   <a class="btn btn-link" href="https://www.behance.net/Afrily/">INSPIRE</a>
+
+                   <a class="btn btn-link" target="_blank" href="https://twitter.com/afrily54">TWEET</a>
+                   <a class="btn btn-link" target="_blank" href="https://www.facebook.com/afrily54/">LIKE</a>
+                   <a class="btn btn-link" target="_blank" href="https://www.instagram.com/afrily54/">TAG</a>
+                   <a class="btn btn-link" target="_blank" href="https://www.behance.net/Afrily/">INSPIRE</a>
 
                    {% include ':layout:modal.html.twig' with {idModal:'mContact', boxModal:'mContact', title:'home.modal.contact.title'|trans, content: 'home.modal.contact.content'|trans|trans, content2: 'home.modal.contact.content2'|trans|trans, content3: 'home.modal.contact.content3'|trans} %}
 
@@ -56,5 +70,6 @@
         </div>
     </footer>
 
+    {% block javascripts %}{% endblock %}
 {% endblock %}
 
