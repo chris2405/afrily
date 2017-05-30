@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body_id 'video' %}
+{% block body %}
+
+    <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <video autoplay loop poster="" id="bgvid" class='fillWidth' >
+                   <source src="{{ asset('videos/cover-web-video.mov') }}" type="video/mov">
+               </video>
+           </div>
+       </div>
+    </div>
+{% endblock %}

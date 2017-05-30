@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'nowayregular2';
+    src: url('../fonts/nowayRegular/noway-regular-webfont.woff2') format('woff2'),
+    url('../fonts/nowayRegular/noway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aliens_and_cowsregular';
+    src: url('../fonts/aliensWebfont/aliens_and_cows_trial-webfont.woff2') format('woff2'),
+    url('../fonts/aliensWebfont/aliens_and_cows_trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*[class*="col-"] {*/
+    /*border: 2px solid black;*/
+/*}*/
+body,html{
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+    text-align: center;
+    color: whitesmoke !important;
+    font-family: nowayregular2, serif !important;
+    font-size: large;
+}
+
+body#home{
+    background: url(../img/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+header{
+    height: 35%;
+}
+
+#more{
+    height: 40%;
+}
+footer{
+    margin:12rem;
+    bottom: 0;
+
+}
+
+#bgvid{
+    position:fixed;
+    right:0;
+    bottom:0;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    z-index:-999;
+    overflow:hidden;
+    background-size:cover;
+}
+video{
+    display:block;
+    margin: 0 auto;
+}
+
+.modal-header{
+    background-color: rgba(85, 4, 81, 0.72) !important;
+}
+.modal-content{
+    color: black;
+
+}
+
+.modal-dialog{
+    text-align: center;
+    padding-top: 35%;
+}
+.btn-link {
+    font-weight: 400 !important;
+    color: #FFFFFF !important;
+    border-radius: 0 !important;
+}
+
+a,.btn-link:hover,.btn-link:visited,.btn-link:active,.btn-link:focus,.btn-link:link{
+    text-decoration: none !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+}
+
+.logo{
+    height: 100px;
+    margin-top: 7%;
+}
+
+.centre{
+    font-family: aliens_and_cowsregular, Serif !important;
+    font-size: 35px;
+}
+
+#know{
+    margin-top: 7%;
+}
+
+button span.contact{
+    text-transform: uppercase;
+}
+
+.play{
+    width: 80px;
+    opacity: .5;
+    margin: 30px 0;
+}
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}

@@ -1,0 +1,12 @@
+home:
+    button:
+        contact: Contact
+
+    modal:
+        contact:
+           title: Contact
+           content:  (+33) 2 72 16 63 62
+           content2:  info@afrily.com
+           content3:  19 boulevard Marie et Alexandre Oyon, 72100 Le Mans, France
+
+

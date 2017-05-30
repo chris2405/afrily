@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+{% block body_id 'home' %}
+{% block body %}
+    {#<div class="video-container">#}
+        {#<video autoplay loop poster="" id="bgvid" class='fillWidth' >#}
+            {#<source src="{{ asset('videos/toystory.mp4') }}" type="video/mp4">#}
+        {#</video>#}
+    {#</div>#}
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="logo" alt="logo afrily" title="" src="{{ asset('img/LOGO.png') }}" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-flex">
+                    <h3 class="centre">
+                        INNOVATION BY POLYMATHS
+                    </h3>
+
+                    <a href="{{ path('video') }}" class="text-center">
+                        <img id="play" class="img-fluid play" alt="" title="" src="{{ asset('img/play.png') }}">
+                    </a>
+
+                    <p class="know">
+                        KNOW MORE
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+                   <!-- Trigger/Open The Modal -->
+                   <button type="button" class="btn btn-link" data-toggle="modal" data-target="#mContact">
+                       <span  class="contact">{{ 'home.button.contact'|trans }}</span>
+                   </button>
+                   <a class="btn btn-link" href="https://twitter.com/afrily54">TWEET</a>
+                   <a class="btn btn-link" href="https://www.facebook.com/afrily54/">LIKE</a>
+                   <a class="btn btn-link" href="https://www.instagram.com/afrily54/">TAG</a>
+                   <a class="btn btn-link" href="https://www.behance.net/Afrily/">INSPIRE</a>
+
+                   {% include ':layout:modal.html.twig' with {idModal:'mContact', boxModal:'mContact', title:'home.modal.contact.title'|trans, content: 'home.modal.contact.content'|trans|trans, content2: 'home.modal.contact.content2'|trans|trans, content3: 'home.modal.contact.content3'|trans} %}
+
+               </div>
+           </div>
+        </div>
+    </footer>
+
+{% endblock %}
+
